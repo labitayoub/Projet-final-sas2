@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -218,7 +216,7 @@ void trier() {
 
 void rechercher() {
     int choixRecherche;
-    printf("Choisissez le critère de recherche:\n");
+    printf("Choisissez le critre de recherche:\n");
     printf("1 - Recherche par référence\n");
     printf("2 - Recherche par nom\n");
     printf("3 - Recherche par date\n");
@@ -228,12 +226,12 @@ void rechercher() {
     switch (choixRecherche) {
         case 1: {
             int ref;
-            printf("Entrez la référence à rechercher : ");
+            printf("Entrez la reference a rechercher : ");
             scanf("%d", &ref);
             bool cas = false;
             for (int i = 0; i < compteur; i++) {
                 if (RDV[i].reference == ref) {
-                    printf("Reservation trouvée : Nom: %s, Prenom: %s, Telephone: %s, Age: %d, Statut: %d, Date: %s\n",
+                    printf("Reservation trouvee : Nom: %s, Prenom: %s, Telephone: %s, Age: %d, Statut: %d, Date: %s\n",
                            RDV[i].nom, RDV[i].prenom, RDV[i].telephone, RDV[i].age, RDV[i].statut, RDV[i].date);
                     cas = true;
                     break;
@@ -246,12 +244,12 @@ void rechercher() {
         }
         case 2: {
             char nom[50];
-            printf("Entrez le nom à rechercher : ");
+            printf("Entrez le nom a rechercher : ");
             scanf("%s", nom);
             bool cas = false;
             for (int i = 0; i < compteur; i++) {
                 if (strcmp(RDV[i].nom, nom) == 0) {
-                    printf("Reservation trouvée : Nom: %s, Prenom: %s, Telephone: %s, Age: %d, Statut: %d, Date: %s\n",
+                    printf("Reservation trouvee : Nom: %s, Prenom: %s, Telephone: %s, Age: %d, Statut: %d, Date: %s\n",
                            RDV[i].nom, RDV[i].prenom, RDV[i].telephone, RDV[i].age, RDV[i].statut, RDV[i].date);
                     cas = true;
                 }
